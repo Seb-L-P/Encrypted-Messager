@@ -2,23 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HackerChat</title>
+  <title>HackerChat Terminal</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="auth">
-    <h1>HackerChat</h1>
-    <input id="username" type="text" placeholder="Username">
-    <input id="password" type="password" placeholder="Password">
-    <button onclick="signup()">Sign Up</button>
-    <button onclick="login()">Login</button>
+  <!-- Terminal container -->
+  <div id="terminal">
+    <span id="prompt-text">&gt; </span>
   </div>
-  <div id="chat" style="display: none;">
-    <div id="messages"></div>
-    <input id="messageInput" type="text" placeholder="Type a message">
-    <button onclick="sendMessage()">Send</button>
-  </div>
+
+  <!-- Hidden input to capture keystrokes -->
+  <input type="text" id="hidden-input" autofocus style="opacity: 0; position: absolute; left: -9999px;">
+
+  <!-- Socket.IO client -->
   <script src="/socket.io/socket.io.js"></script>
-  <script src="script.js"></script>
+  <!-- Terminal logic -->
+  <script src="terminal.js"></script>
 </body>
 </html>
+

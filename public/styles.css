@@ -1,29 +1,26 @@
 body {
-    background-color: black;
-    color: green;
-    font-family: monospace;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  #auth, #chat {
-    text-align: center;
-  }
-  input, button {
-    background: none;
-    border: 1px solid green;
-    color: green;
-    padding: 5px;
-    margin: 5px;
-    font-family: monospace;
-  }
-  #messages {
-    height: 300px;
-    overflow-y: auto;
-    border: 1px solid green;
-    padding: 10px;
-    margin-bottom: 10px;
-    text-align: left;
-  }
+  background-color: #000;
+  color: #0f0;
+  font-family: monospace;
+  margin: 0;
+  padding: 1rem;
+}
+
+#terminal {
+  white-space: pre; /* Preserve spaces and newlines */
+}
+
+/* Blinking caret using a pseudo-element */
+#prompt-text::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: #0f0;
+  margin-left: 2px;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
