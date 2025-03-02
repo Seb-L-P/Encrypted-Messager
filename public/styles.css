@@ -1,0 +1,29 @@
+body {
+    background-color: black;
+    color: green;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  #auth, #chat {
+    text-align: center;
+  }
+  input, button {
+    background: none;
+    border: 1px solid green;
+    color: green;
+    padding: 5px;
+    margin: 5px;
+    font-family: monospace;
+  }
+  #messages {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid green;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
