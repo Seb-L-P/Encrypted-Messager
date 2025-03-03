@@ -7,13 +7,31 @@ body {
 }
 
 #terminal {
-  white-space: pre; /* Preserve spaces and newlines */
+  white-space: pre; /* Preserve spaces and newlines exactly as typed */
 }
 
-/* Blinking caret using a pseudo-element */
+/* Output area styling */
+#output {
+  margin-bottom: 1rem;
+}
+
+/* Input line container */
+#input-line {
+  display: inline-block;
+}
+
+/* Prompt text styling */
+#prompt-text {
+  display: inline;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+/* Blinking caret as a pseudo-element on the prompt */
 #prompt-text::after {
   content: "";
   display: inline-block;
+  vertical-align: middle;
   width: 2px;
   height: 1em;
   background-color: #0f0;
@@ -23,4 +41,10 @@ body {
 
 @keyframes blink {
   50% { opacity: 0; }
+}
+
+/* Current line styling */
+#current-line {
+  display: inline;
+  vertical-align: middle;
 }
